@@ -91,7 +91,7 @@ class Rectangle
     num rRight = min (this.right, rect.right);
     num rBottom = min (this.bottom, rect.bottom);
 
-    return new Rectangle(rLeft, rRight, rRight - rLeft, rBottom - rTop);
+    return new Rectangle(rLeft, rTop, rRight - rLeft, rBottom - rTop);
   }
 
   Rectangle union(Rectangle rect)
@@ -101,6 +101,6 @@ class Rectangle
     num rRight = max (this.right, rect.right);
     num rBottom = max (this.bottom, rect.bottom);
 
-    return new Rectangle(rLeft, rRight, rRight - rLeft, rBottom - rTop);
+    return new Rectangle(rLeft, rTop, rRight - rLeft, rBottom - rTop);
   }
 }

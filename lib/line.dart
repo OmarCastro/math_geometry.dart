@@ -89,7 +89,7 @@ class Line2D{
    * The function returns the line's start point if t = 0,
    * and its end point if t = 1.
    */
-  Point2D pointAt(num t) => (p2 - p1)..multiplicate(t)..add(p1);
+  Point2D pointAt(num t) => (p2 - p1)..multiply(t)..add(p1);
 
   /**
    * return the parameter t of intersection between the
@@ -117,7 +117,9 @@ class Line2D{
     return 1.0 - (a.perpDot(line.p2 - this.p2) / f);
   }
 
-
+/**
+ * Returns the nearest parameterized position of the point specified by t.
+ */
   num nearestParamT(Point2D p){
     num l2 = lenghtSquared;
     return (l2 == 0)? 0 : (p - p1).dot(p2 - p1) / l2;
@@ -130,8 +132,10 @@ class Line2D{
 
   Point2D nearestPointInInfiniteLine(Point2D p) => pointAt(nearestParamT(p));
 
+  /// gets the distance of a point [p] to the line
   num distanceToPoint(Point2D p) => (nearestPointInLine(p)..subtract(p)).length;
 
-  Point2D reflect(Point2D p) => nearestPointInInfiniteLine(p)..multiplicate(2)..subtract(p);
+  /// gets the point that reflects in the line
+  Point2D reflect(Point2D p) => nearestPointInInfiniteLine(p)..multiply(2)..subtract(p);
 
 }
