@@ -1,0 +1,9 @@
+name: math_geometry
+version: 0.1.1
+author: Omar Castro
+description: a math library using geometry to help in creation of 2D html applications
+dependencies:
+  unittest: any
+
+#dependencies:
+#  unittest: any
