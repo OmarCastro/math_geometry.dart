@@ -22,6 +22,8 @@ class Point2D
 
   /// Calculates the distance between [p1] and [p2]
   static num distance(Point2D p1, Point2D p2) => p1.distanceTo(p2);
+  
+  /// Calculates the interpolation between [p1] and [p2]
   static Point2D interpolate(Point2D p1, Point2D p2) => new Point2D((p1.x + p2.x) / 2, (p1.y + p2.y) / 2);
 
 
@@ -34,7 +36,7 @@ class Point2D
 
   void add(Point2D p){this.x += p.x;this.y += p.y;}
   void subtract(Point2D p){this.x -= p.x; this.y -= p.y;}
-  void multiplicate(num value){this.x *= value; this.y *= value;}
+  void multiply(num value){this.x *= value; this.y *= value;}
   void divide(num value){this.x /= value; this.y /= value;}
 
   Point2D operator + (Point2D p) => new Point2D(this.x + p.x, this.y + p.y);

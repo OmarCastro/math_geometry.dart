@@ -36,10 +36,10 @@ class Shape2D{
       num left = points.first.x;
       num right = left;
       for(Point2D point in points){
-        if(top > point.y) top = point.y;
+        if(top    > point.y) top    = point.y;
         if(bottom < point.y) bottom = point.y;
-        if(left > point.x) left = point.x;
-        if(right < point.x) right = point.x;
+        if(left   > point.x) left   = point.x;
+        if(right  < point.x) right  = point.x;
       }
       BBox.setTo(left,top,right-left,bottom-top);
     }

@@ -2,7 +2,7 @@ library unit_tests;
 
 import 'dart:math';
 import 'package:unittest/unittest.dart';
-import '../geometry.dart';
+import '../math/geometry.dart';
 
 part 'point2D_test.dart';
 part 'matrix_test.dart';
